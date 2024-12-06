@@ -1,18 +1,340 @@
-The research methodology employed a comprehensive within-subjects design involving 20 participants (10 with master's backgrounds and 10 with bachelor's degrees). Each participant was compensated with 100 RMB for approximately one hour of participation. The study meticulously controlled for variables by having each participant experience both control (standard video player) and experimental (VisAug-enhanced) conditions.
-<br>
-The experimental procedure consisted of three distinct phases. In the familiarization phase, participants received a thorough orientation to the system and experimental environment. During the baseline measurement phase, participants used a standard video player without any visual aids while researchers recorded task completion times and noted any difficulties encountered. In the intervention phase, participants reviewed the same video segments with VisAug's image and text enhancement features enabled at a default enhancement coefficient of 5.
-<br>
-Task performance analysis revealed nuanced results across different content types. For Task 1, focusing on AI's educational impact (timestamps 07:25; 19:22-21:15), the weighted accuracy increased dramatically from 77.5% to 92.5%. This improvement was attributed to VisAug's ability to highlight relevant educational concepts and maintain contextual continuity. Task 2, concerning government actions on AI technology (timestamps 13:43-14:30; 18:27-19:20), showed a modest improvement from 82.5% to 85%, suggesting that policy-related content might require different enhancement strategies. Task 3, dealing with societal concerns about AI (timestamp 2:35-3:53), demonstrated the smallest improvement from 25% to 30%, indicating challenges in visualizing abstract societal concepts.
-<br>
-The qualitative feedback revealed specific insights about system features. The transcript functionality received particularly strong praise from non-native speakers, with participant P2&3 noting its crucial role in content comprehension. However, users like P11&12 identified limitations in the auto-scrolling feature, suggesting the need for more user control. The keyword highlighting feature generated mixed responses - while generally appreciated for quick content scanning, participants like P7 noted that "not all highlighted keywords represented core content," suggesting the need for more sophisticated keyword selection algorithms.
-<br>
-Navigation challenges emerged as a significant theme, particularly for non-native language content. Users like P9 requested content segmentation based on discussion topics, while P7 suggested implementing bookmarking and annotation features. The visual enhancement component received detailed critique, with users like P13 noting that sometimes the generated images reduced the content's perceived seriousness, especially for serious topics like societal impacts.
-<br>
-The correlation analysis provided statistical validation of system effectiveness. The strong correlation (0.8643, p=0.0013) between understanding new information and clarifying complex concepts suggests that VisAug successfully supports cognitive processing of video content. The moderate correlation (0.7324, p=0.0160) between information understanding and engagement indicates that better comprehension leads to increased user involvement. However, the weaker correlation (0.5787, p=0.0796) between concept clarification and engagement levels suggests that simply making concepts clearer doesn't automatically ensure user engagement.
-<br>
-User interface preferences showed interesting patterns. Participants consistently requested a centralized video display with peripheral enhancement features, suggesting that the current split-screen design might disperse attention. They also expressed strong interest in customization options, particularly for keyword highlighting and visual enhancement styles. The subtitling feature received high praise for accuracy, but users requested more control over scrolling and display options.
-<br>
-Technical performance metrics revealed that VisAug's enhancement generation maintained consistent response times below 2 seconds, meeting user expectations for real-time interaction. However, some users noted occasional misalignment between generated visualizations and video content, particularly during rapid topic transitions. These insights suggest the need for more sophisticated content analysis algorithms and possibly predictive enhancement generation to maintain synchronization with video playback.
-<br>
-These findings provide a robust foundation for future development, highlighting both the system's strengths in content comprehension support and areas requiring refinement, particularly in navigation tools and visual enhancement relevance.
-<br>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VisAug User Study</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+        }
+        h1 {
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+        p {
+            margin-bottom: 1.2em;
+            text-align: justify;
+        }
+        .container {
+            background-color: #f9f9f9;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+              .question {
+            background-color: #f9f9f9;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .scale {
+            display: flex;
+            justify-content: space-between;
+            margin: 10px 0;
+            padding: 10px;
+            background-color: #fff;
+        }
+        .scale-item {
+            text-align: center;
+        }
+
+         table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #f5f5f5;
+        }
+        .empty {
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>VisAug System User Study</h1>
+        <h2>1. Research Objectives and Hypotheses</h2>
+        <p>This user study evaluates the effectiveness of the VisAug system in enhancing navigation and engagement with speech-rich video content. We hypothesize that VisAug will improve user efficiency in video content navigation and increase content comprehension through its visual enhancements.</p>
+
+        <h2>2. Study Design</h2>
+
+        <p>The study employs a within-subjects design where each participant experiences two conditions: using a standard video player (control) and using the VisAug system with visual enhancements (treatment). The experimental materials comprise diverse speech-rich video clips selected to evaluate VisAug system performance comprehensively.</p>
+        <h4>Task Design:</h4>
+
+        <p>For task design, participants complete information location tasks to assess navigation efficiency and content engagement. The tasks involve locating video segments discussing AI social concerns, identifying content about government AI policy initiatives, and finding discussions about AI's impact on education. Specifically, participants use the VisAug system to quickly locate content about public concerns regarding AI's societal implementation, government responses to AI development challenges, and AI's influence on educational models and learning methods.</p>
+
+        <p>All tasks are meticulously designed to ensure controlled data analysis while maintaining ecological validity, providing an environment that effectively tests system functionality under realistic conditions. This approach allows for robust evaluation of the VisAug system's ability to enhance video content navigation and user engagement.</p>
+
+        <h4>Experimental Procedure:</h4>
+
+            <p>Familiarization Phase: Introduce participants to study procedures and allow time for environmental acclimation.
+            Baseline Phase: Participants view video clips using standard player without visual aids. Researchers record task completion times and issues encountered.</p>
+            <p>Intervention Phase: Same participants watch identical clips with VisAug system's visual and text enhancement features enabled (enhancement coefficient: 5). Performance metrics continue to be tracked.</p>
+            <p>Personalization Phase: Participants adjust visual enhancement settings according to preferences and view additional videos. Post-viewing questionnaire collects subjective ratings on task load, sense of control, and system intrusiveness. Open-ended discussion allows participants to share insights and experiences.</p>
+
+        <h4>Participant Recruitment:</h4>
+
+            <p>Sample size (n=20) determined through power analysis. Recruited 20 participants: 5 undergraduate students, 10 graduate students, and 5 working professionals. Pre-test questionnaires confirmed high information processing and critical thinking capabilities. Sample balanced for gender, age, and technical proficiency.</p>
+
+            <p>Participants (P1-P20) completed information location tasks followed by structured usability interviews to gather feedback and improvement suggestions. Each session lasted approximately one hour, with $15 compensation provided upon completion.</p>
+
+
+        <h2>3. Accuracy Analysis</h2>
+
+        <p>Task 1 evaluated participants' ability to locate video segments discussing AI's educational impact, with target time windows at 07:25 and 19:22-21:15. Prior to using VisAug, 14 participants achieved exact matches and 3 achieved partial matches, yielding a weighted accuracy of 77.5% (weights: full match=1.0, partial=0.5). After implementing VisAug, accuracy improved significantly with 18 exact matches and 1 partial match, resulting in 92.5% weighted accuracy. This 15% improvement suggests VisAug effectively enhanced users' content navigation and location capabilities.</p>
+        <p>Task 2 evaluated locating content about government AI policies, with target windows at 13:43-14:30 and 18:27-19:20. Without VisAug, participants achieved 15 exact matches, 3 partial matches, and 2 non-matches, yielding 82.5% weighted accuracy (weights: full=1.0, partial=0.5). With VisAug, results improved to 16 exact matches, 2 partial matches, and 1 non-match, reaching 85% accuracy. This modest 2.5% improvement, smaller than Task 1's gain, may reflect the content's complexity or lower topic engagement among participants.</p>
+        <p>Task 3 assessed participants' ability to locate discussions of AI developers' societal concerns within a short segment 2:35-3:53. Without VisAug, participants achieved 3 exact matches, 4 partial matches, and 13 non-matches (25% weighted accuracy). Post-VisAug results showed modest improvement with 5 exact matches, 2 partial matches, and 13 non-matches (30% accuracy). This limited 5% improvement, smaller than previous tasks, likely reflects challenges in navigating brief, concentrated dialogue segments.</p>
+        <p>In summary, VisAug effectively improved user efficiency and accuracy in processing speech-rich video content, as demonstrated by accuracy improvements across tasks (Task 1: +15%, Task 2: +2.5%, Task 3: +5%). However, performance gains were less pronounced for brief dialogue segments, suggesting potential areas for system optimization.</p>
+
+        <h2>4. User Study Questionnaire</h2>
+        <h4>Task Load Assessment:</h4>
+            <p>Please rate your agreement with the following statements about VisAug system usage (5-point Likert scale):</p>
+            <div class="question">
+                <h5>Mental Demand</h5>
+                <p>How mentally demanding was using the VisAug system?</p>
+                <div class="scale">
+                    <div class="scale-item">1<br>Very Low</div>
+                    <div class="scale-item">2</div>
+                    <div class="scale-item">3</div>
+                    <div class="scale-item">4</div>
+                    <div class="scale-item">5<br>Very High</div>
+                </div>
+            </div>
+
+            <div class="question">
+                <h5>Physical Demand</h5>
+                <p>How physically demanding was using the VisAug system?</p>
+                <div class="scale">
+                    <div class="scale-item">1<br>Very Low</div>
+                    <div class="scale-item">2</div>
+                    <div class="scale-item">3</div>
+                    <div class="scale-item">4</div>
+                    <div class="scale-item">5<br>Very High</div>
+                </div>
+            </div>
+
+            <div class="question">
+                <h5>Frustration Level</h5>
+                <p>How frustrating was using the VisAug system?</p>
+                <div class="scale">
+                    <div class="scale-item">1<br>Very Low</div>
+                    <div class="scale-item">2</div>
+                    <div class="scale-item">3</div>
+                    <div class="scale-item">4</div>
+                    <div class="scale-item">5<br>Very High</div>
+                </div>
+            </div>
+
+            <div class="question">
+                <h5>Temporal Demand</h5>
+                <p>How much time pressure did you feel using the VisAug system?</p>
+                <div class="scale">
+                    <div class="scale-item">1<br>Very Low</div>
+                    <div class="scale-item">2</div>
+                    <div class="scale-item">3</div>
+                    <div class="scale-item">4</div>
+                    <div class="scale-item">5<br>Very High</div>
+                </div>
+            </div>
+            <h4>Effort & Effectiveness Assessment:</h4>
+
+             <div class="question">
+            <h5>Effort Level</h5>
+            <p>How much effort did using VisAug require?</p>
+            <div class="scale">
+                <div class="scale-item">1<br>Very Low</div>
+                <div class="scale-item">2</div>
+                <div class="scale-item">3</div>
+                <div class="scale-item">4</div>
+                <div class="scale-item">5<br>Very High</div>
+            </div>
+            <p class="purpose">Purpose: Evaluate time and energy required for system adaptation</p>
+        </div>
+
+        <div class="question">
+            <h5>Efficiency and Effectiveness</h5>
+            <p>How efficient and effective was VisAug in task completion?</p>
+            <div class="scale">
+                <div class="scale-item">1<br>Very Low</div>
+                <div class="scale-item">2</div>
+                <div class="scale-item">3</div>
+                <div class="scale-item">4</div>
+                <div class="scale-item">5<br>Very High</div>
+            </div>
+            <p class="purpose">Purpose: Assess speed and quality improvements in task completion</p>
+        </div>
+
+
+    <div class="section">
+        <h4>System Control & Viewing Experience:</h4>
+        <div class="question">
+            <p>System Control: Level of control over visual enhancements?</p>
+            <p>Viewing Experience: Did VisAug interrupt video viewing?</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h4>Enhancement Effectiveness:</h4>
+        <div class="question">
+            <p>Rate the following (1-5 scale):</p>
+            <ul>
+                <li>Understanding new information</li>
+                <li>Clarifying complex concepts</li>
+                <li>Engagement level</li>
+                <li>Conversation stimulation</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="section">
+        <h4>Enhancement Quality:</h4>
+        <div class="question">
+            <p>Evaluate:</p>
+            <ul>
+                <li>Content relevance</li>
+                <li>Quality and clarity</li>
+                <li>Visual appeal</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="section">
+        <h4>Feature Usage:</h4>
+        <div class="question">
+            <p>Rate helpfulness of:</p>
+            <ul>
+                <li>Transcript feature</li>
+                <li>Timeline feature</li>
+                <li>Image storyboard</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="section">
+        <h4>Overall Satisfaction (ASQ Scale):</h4>
+        <div class="question">
+            <p>Rate satisfaction with:</p>
+            <ul>
+                <li>Task difficulty</li>
+                <li>Time spent</li>
+                <li>Support information</li>
+            </ul>
+        </div>
+    </div>
+    <h2>5. Statistical Summary of the VisAug Questionnaire Results</h2>
+    <h4>Descriptive Statistics Analysis: </h4>
+    <p>Task Difficulty and Time Investment - Initial assessment of whether the VisAug system reduced task difficulty and saved time.</p>
+    <h5>Task Difficulty</h5>
+    <ul>
+        <li>Median: 4.0, Mean: 3.85, showing moderate task difficulty</li>
+        <li>SD: 0.79, indicating consistent ratings</li>
+        <li>Range: 3-5, suggesting acceptable difficulty levels</li>
+    </ul>
+    
+    <h5>Time Investment</h5>
+    <ul>
+        <li>Median: 4.0, Mean: 3.85, indicating moderate time requirements</li>
+        <li>SD: 0.79, showing consistent time perception</li>
+        <li>Range: 2-5, reflecting varied time experience across users</li>
+    </ul>
+
+    <h4>Descriptive Statistics: </h4>
+    <p>Understanding and Engagement with Visual Enhancements</p>
+    <h5>Understanding New Information:</h5>
+    <ul>
+        <li>Median: 4.0, Mean: 3.65 (indicating moderate helpfulness)</li>
+        <li>SD: 0.97 (showing varied user experiences)</li>
+        <li>Range: 1-5 (wide variance in perceived benefits)</li>
+    </ul>
+    
+    <h5>Engagement:</h5>
+    <ul>
+        <li>Median: 4.0, Mean: 3.85 (suggesting increased engagement)</li>
+        <li>SD: 0.79 (consistent ratings)</li>
+        <li>Range: 1-5 (varied engagement levels)</li>
+    </ul>
+
+    <h5>Summary:</h5>
+    <p>Task Performance: Users found moderate difficulty and time investment with VisAug system, showing consistent ratings.
+</p>
+      <p>Content Engagement: Visual enhancements improved information comprehension and engagement.
+</p>
+    <h4>Correlation Analysis:</h4>
+    <p>Analyzing visual enhancement correlations for cognitive and interactive benefits:</p>
+     <table>
+        <tr>
+            <th>Variables</th>
+            <th>Engagement</th>
+            <th>Clarification</th>
+            <th>Understanding</th>
+        </tr>
+        <tr>
+            <td><strong>Engagement</strong></td>
+            <td class="empty">1</td>
+            <td>r = 0.4387<br>p = 0.0530</td>
+            <td>r = 0.6331<br>p = 0.0027</td>
+        </tr>
+        <tr>
+            <td><strong>Clarification</strong></td>
+            <td class="empty"></td>
+            <td class="empty">1</td>
+            <td>r = 0.7808<br>p = 0.0000</td>
+        </tr>
+        <tr>
+            <td><strong>Understanding</strong></td>
+            <td class="empty"></td>
+            <td class="empty"></td>
+            <td class="empty">1</td>
+        </tr>
+    </table>
+    <p>Correlation analysis revealed significant relationships between visual enhancement metrics. Strong positive correlation between understanding new information and clarifying complex concepts (r=0.7808, p<0.0001) indicates that improvements in understanding closely align with concept clarification. Understanding new information also showed moderate positive correlation with engagement (r=0.6331, p=0.0027), suggesting that better understanding leads to increased engagement. The relationship between concept clarification and engagement showed moderate correlation (r=0.4387, p=0.0530) but wasn't statistically significant. These results demonstrate that visual enhancements most effectively connect understanding with concept clarification, while their impact on engagement varies.</p>
+
+
+        <h2>6. Figures</h2>
+        <img src="task_load.png" style="width:100%">
+        <img src="engagement.png" style="width:100%">
+        <img src="control.png" style="width:100%">
+        <img src="visual_enhancement.png" style="width:100%">
+        <img src="quality.png" style="width:100%">
+        <img src="features.png" style="width:100%">
+        <img src="after.png" style="width:100%">
+
+
+        <h2>7.  Interview Data Analysis</h2>
+        <p>The interview data analysis involved coding open-ended responses to identify recurring themes and patterns. This qualitative analysis complemented the quantitative findings, providing comprehensive insight into user experiences and valuable direction for VisAug system improvements.</p>
+        <h4>Subtitle Panel Usability Analysis:</h4>
+        <p>The subtitle panel analysis revealed strong user appreciation for comprehension support, particularly for non-native content. Users (P2&3, P10) highlighted precise dialogue location and keyword highlighting benefits. However, several usability issues emerged: automatic scrolling constraints frustrated users (P11&12), while some requested customizable scroll controls (P15). Users suggested integrating mouseover image enhancements (P17) and improving subtitle marker visibility (P19). Interface preferences varied, with requests for vertical timeline layouts (P17) and customizable display options (P15). Overall, users confirmed subtitles' effectiveness for content comprehension, with P19 noting their particular value for quick content overview and theme identification.</p>
+
+        <h4>Analysis of Keyword Highlighting Effectiveness:</h4>
+        <p>Keyword highlighting analysis revealed mixed user feedback. While generally helpful for content navigation, users identified several limitations. P5 praised visualization of abstract terms, but P7 and P11 noted issues with term selection relevance. Users found common terms like "technology" and "GPT" (P20) highlighted too frequently while missing contextually important phrases like "potential damage." Suggestions included user-customizable keywords (P5), improved algorithmic selection, and timestamp-based context summaries (P14). P12 valued highlighting for identifying key content and emotional tone, though P13 noted occasional inaccuracies. Overall, users found the feature valuable but suggested more precise term selection focusing on topic-specific rather than general terminology.</p>
+
+        <h4>Video Navigation Challenges:</h4>
+        <p>Users reported navigation challenges, particularly with non-native content, highlighting the need for improved content organization. P2&3 and P9 requested topic-based segmentation for easier navigation, while P7 suggested adding annotation capabilities for marking key points. Layout concerns emerged, with P11 noting the split-screen design dispersed attention and suggesting a centered video layout with peripheral subtitle and image placement. Most users relied heavily on subtitles and keywords for navigation, with P12 requesting enhanced timestamp functionality for better content location. Users consistently expressed desire for improved context viewing capabilities and more efficient navigation tools.</p>
+
+        <h4>Image Enhancement Analysis:</h4>
+        <p>Image enhancement received mixed feedback, with users finding limited utility for concept comprehension. P2&3 and P5 noted image content was often unclear and added cognitive load, particularly for abstract concepts. Users suggested several improvements: event-based visualization (P9), data-specific charts (P10, P15), and context-appropriate imagery (P11, P12). P13 highlighted tone mismatches, noting cartoonish images undermined serious topics. P18 valued relevant academic concept visualization, while P20 requested summary functionality with expandable details. Overall, users sought more contextually relevant and purpose-driven visual enhancements that align with content tone and complexity.</p>
+
+
+
+
+    
+
+
+
+
+    </div>
+</body>
+</html>
